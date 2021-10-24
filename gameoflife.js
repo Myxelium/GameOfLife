@@ -40,17 +40,15 @@ const printCells = (state) => {
   const { topRight, bottomLeft } = corners(state);
   const width = topRight[0] - bottomLeft[0] + 1;
   const height = topRight[1] - bottomLeft[1] + 1;
-
   const rows = [];
   for (let y = 0; y < height; y++) {
-    const row = [];
-    for (let x = 0; x < width; x++) {
-      row.push(printCell([x + bottomLeft[0], y + bottomLeft[1]], state));
-    }
-    rows.push(row.join(""));
+    rows.push(
+      Array.from(Array(width), (_, x) => printCell([x + bottomLeft[0], y + bottomLeft[1]], state))
+        .join("")
+        .concat("\n")
+    );
   }
-  rows.reverse();
-  return rows.join("\n");
+  return rows.join("");
 };
 
 const getNeighborsOf = ([x, y]) => {
