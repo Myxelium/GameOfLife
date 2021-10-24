@@ -1,0 +1,13 @@
+{
+  "name": "gameoflife",
+  "version": "1.0.0",
+  "description": "## Status",
+  "main": "js/gameoflife.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node js/gameoflife.js rpentomino 300"
+  },
+  "author": "",
+  "license": ""
+}
