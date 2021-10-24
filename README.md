@@ -11,10 +11,11 @@ run with node:
 | square|  |
 | blink|  |
 | 1-2-3-4|  |
+| StrictVolatility ||
 
 
 Add a pattens in ``patterns.js`` generate them using my badly written generator in ``PatternGenerator`` folder.
 
 Usage: ``node js/gameoflife.js [pattern] [generation] [(Optional) speed in ms]``
 
-Example: ``node js/gameoflife.js 1-2-3-4 420 690``
+Example: ``node js/gameoflife.js StrictVolatility 420 690``
