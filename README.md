@@ -3,7 +3,7 @@
 run with node:
 ``npm start``
 
-| Patterns |  |
+| Starting Pattern names|  |
 |--|--|
 | AForAll |  |
 | rpentomino|  |
