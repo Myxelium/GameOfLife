@@ -1,4 +1,4 @@
 # GameOfLife
 
 run with node:
-node js/gameoflife.js rpentomino 50
+node gameoflife.js rpentomino 50
