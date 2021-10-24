@@ -1,4 +1,4 @@
-# GameOfLife
+# Game Of Life
 
 run with node:
 ``npm start``
