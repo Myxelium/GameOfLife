@@ -15,6 +15,6 @@ run with node:
 
 Add a pattens in ``patterns.js`` generate them using my badly written generator in ``PatternGenerator`` folder.
 
-Usage: node js/gameoflife.js [pattern] [generation] [(Optional) speed in ms]
+Usage: ``node js/gameoflife.js [pattern] [generation] [(Optional) speed in ms]``
 
-Example: Usage: node js/gameoflife.js 1-2-3-4 420 690
+Example: ``node js/gameoflife.js 1-2-3-4 420 690``
