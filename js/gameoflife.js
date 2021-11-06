@@ -83,8 +83,8 @@ const willBeAlive = (cell, state) => {
 const calculateNext = (state) => {
   const { topRight, bottomLeft } = corners(state);
   const next = [];
-  for (let x = bottomLeft[0] - 1; x <= topRight[0] + 1; x++) {
-    for (let y = bottomLeft[1] - 1; y <= topRight[1] + 1; y++) {
+  for (let y = bottomLeft[1] - 1; y <= topRight[1] + 1; y++) {
+    for (let x = bottomLeft[0] - 1; x <= topRight[0] + 1; x++) {
       if (willBeAlive([x, y], state)) {
         next.push([x, y]);
       }
@@ -97,21 +97,20 @@ const iterate = (state, iterations) => {
   if (iterations === 0) {
     return [state];
   }
-
-  return [state, ...iterate(calculateNext(state), iterations - 1)];
+  return calculateNext(state, 1);
 };
 
 const main = (pattern, iterations) => {
   var interval = speed == null ? 100 : speed;
 
   const startPattern = lifePatterns.startPatterns[pattern];
-  const states = iterate(startPattern, iterations);
+  var state = iterate(startPattern, 1);
 
-  states.forEach((state, index) => {
-    setTimeout(function () {
+  for (var i = 0; i < iterations; i++) {
     console.log(printCells(state));
-    }, index * interval);
-  });
+	state = iterate(state, 1);
+	setTimeout(() => { }, interval);
+  }
 };
 
 if (lifePatterns.startPatterns[pattern] && !isNaN(parseInt(iterations))) {
